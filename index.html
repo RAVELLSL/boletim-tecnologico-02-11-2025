@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletim de Notícias Semanal</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* 1. Configurações Globais e Esquema de Cores */
+        :root {
+            --cor-primaria: #0a2d4d;  /* Azul Escuro (para header/footer/títulos) */
+            --cor-fundo: #f8f9fa;     /* Cinza bem claro (fundo da página) */
+            --cor-caixa: #ffffff;     /* Branco (fundo das caixas de conteúdo) */
+            --cor-texto: #333333;    /* Cinza escuro (texto principal) */
+            
+            --fonte-titulo: 'Poppins', sans-serif;
+            --fonte-corpo: 'Lato', sans-serif;
+        }
+
+        body {
+            font-family: var(--fonte-corpo);
+            line-height: 1.7;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 2. Layout Principal (Header, Main, Footer) */
+        .header {
+            background-color: var(--cor-primaria);
+            color: var(--cor-caixa);
+            padding: 20px 40px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-family: var(--fonte-titulo);
+            font-weight: 700;
+            margin: 0;
+            font-size: 2.2em;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .main-content {
+            background-color: var(--cor-caixa);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+            overflow: hidden; /* Garante que as bordas arredondadas afetem o iframe */
+        }
+
+        .video-header {
+            padding: 25px 40px 20px 40px; 
+            text-align: center; 
+            border-bottom: 1px solid #eee; 
+        }
+        
+        .video-header .data {
+            font-size: 0.95em;
+            color: #777;
+            font-weight: 700;
+        }
+        
+        /* 3. Funcionalidade: Vídeo Responsivo */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* 4. Rodapé */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 30px;
+            color: #888;
+            font-size: 0.9em;
+        }
+        
+        .footer p {
+            margin: 5px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Boletim de Notícias</h1>
+    </header>
+
+    <main class="container">
+        
+        <article class="main-content">
+
+            <section class="video-header">
+                <span class="data">Publicado em 02 de Novembro de 2025</span>
+            </section>
+            
+            <section class="video-wrapper">
+                <iframe 
+                    src="https://drive.google.com/file/d/1mPNzketZ4Y2Yc70J-6778vpq2VI37snm/preview" 
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen>
+                </iframe>
+            </section>
+
+            </article>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2025</p>        
+    </footer>
+
+</body>
+</html>
